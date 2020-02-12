@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShareWAF Blance</title>
+    <style>
+        .blance_div{
+            border:1px solid #cccccc;
+            background: #f4f5f8;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>ShareWAF-Blance</h2>
+    <div class="blance_div">
+        添加负载：<br>
+        <form action="http://localhost:8090/register_blance" method="post">
+            
+            <div>密码：<input type="password" name="password"></div>
+            <div>目标：<input type="text" name="target"></div>
+            <div><input type="submit" name="" value="提交"></div>
+        </form>
+    </div>
+    <div class="blance_div">
+        删除负载：<br>
+        <form action="http://localhost:8090/unregister_blance" method="post">
+            
+            <div>密码：<input type="password" name="password"></div>
+            <div>目标：<input type="text" name="target"></div>
+            <div><input type="submit" name="" value="提交"></div>
+        </form>
+    </div>
+
+    <div class="blance_div">
+        负载列表
+        <form action="http://localhost:8090/get_blance_list" method="post">
+            <div>密码：<input type="password" name="password"></div>
+            <div><input type="submit" name="" value="查询"></div>
+        </form>
+    </div>
+    
+</body>
+
+</html>
